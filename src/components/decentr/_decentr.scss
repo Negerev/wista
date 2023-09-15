@@ -1,0 +1,137 @@
+.decentr {
+  overflow-x: clip;
+  margin-bottom: 100px;
+  .container {
+    position: relative;
+  }
+  &__title {
+    margin-bottom: 30px;
+  }
+  &__content {
+    position: relative;
+    max-width: 670px;
+    margin-left: auto;
+    z-index: 2;
+  }
+  &__text {
+    line-height: 1.1;
+    margin-bottom: 60px;
+    font-size: 48px;
+  }
+  &__eye {
+    position: absolute;
+    bottom: -20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    height: auto;
+    z-index: -1;
+  }
+  &__img {
+    position: absolute;
+    z-index: 2;
+    bottom: 6%;
+    left: 21%;
+    width: 24%;
+    img {
+      width: 100%;
+    }
+  }
+}
+@media(max-width: 1440px) {
+  .decentr {
+    &__eye {
+      width: 80%;
+      bottom: -10%;
+    }
+  }
+  
+}
+@media (max-width: 1439px) {
+  .decentr {
+    &__content {
+      max-width: 51%;
+    }
+    &__text {
+      font-size: 3.5vw;
+    }
+  }
+}
+@media(max-width: 1280px) {
+  .decentr {
+    &__eye {
+      width: 91%;
+      bottom: -21%;
+    }
+  }
+}
+@media (max-width: 991px) {
+  .decentr {
+    &__eye {
+      width: 100%;
+      bottom: -21%;
+    }
+    &__img {
+      width: 27%;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .decentr {
+    margin-bottom: 70px;
+    &__title {
+      margin-bottom: 15px;
+    }
+    &__eye {
+      bottom: -8%;
+      width: 83%;
+    }
+    
+  }
+}
+
+@media (max-width: 576px) {
+  .decentr {
+    &__title {
+      font-size: 62px;
+      margin-bottom: 52%;
+    }
+    &__img {
+      display: none;
+      bottom: auto;
+      top: 15%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    &__content {
+      max-width: 100%;
+    }
+    &__text {
+      margin-bottom: 20px;
+      font-size: 25px;
+    }
+    &__note {
+      font-size: 28px;
+    }
+    &__eye {
+      width: 121%;
+      top: -8%;
+      bottom: auto;
+    }
+  }
+}
+@media(max-width: 500px) {
+  .decentr {
+    &__eye {
+      width: 129%;
+      top: -20%;
+    }
+    &__img {
+      top: 11%;
+      width: 36%;
+    }
+    &__title {
+      margin-bottom: 64%;
+    }
+  }
+}

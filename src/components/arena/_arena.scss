@@ -1,0 +1,124 @@
+.arena {
+  margin-bottom: 100px;
+  &__title {
+    line-height: 0.8;
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__content {
+    max-width: 848px;
+    font-size: 58px;
+  }
+  &__text {
+    margin-bottom: 95px;
+    line-height: 1.1;
+    span {
+      color: #FF3F12;
+    }
+  }
+  &__btn {
+    position: relative;
+    display: inline-block;
+    padding: 35px 60px;
+    background-color: #FF3F12;
+    border-radius: 72px;
+    transition: background-color .5s ease-in-out, color .5s;
+    &::before {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      top: -36%;
+      left: 30%;
+      width: 38%;
+      height: 152%;
+      background-image: url(../img/index/footer/back.png);
+      opacity: 0;
+      transition: all .5s ease;
+      background-size: contain;
+    }
+    &:hover {
+      color: #FF3F12;
+      background-color: #fff;
+      &:before {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@media(max-width: 1920px) {
+  .arena {
+    &__content {
+      max-width: 550px;
+      font-size: 48px;
+    }
+  }
+}
+
+@media (max-width: 1439px) {
+  .arena {
+    &__title {
+      margin-bottom: 20px;
+    }
+    &__content {
+      max-width: 45%;
+      font-size: 4.3vw;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .arena {
+    &__btn {
+      padding: 25px 45px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .arena {
+    margin-bottom: 150px;
+
+    &__title {
+      margin-bottom: 30px;
+    }
+    &__text {
+      margin-bottom: 40px;
+    }
+    &__content {
+      max-width: 50%;
+    }
+    &__img-box {
+      margin-bottom: 25px;
+    }
+    &__btn {
+      &::before {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .arena {
+    &__inner {
+      position: relative;
+      flex-direction: column;
+    }
+    &__content {
+      max-width: 100%;
+      font-size: 28px;
+    }
+    &__btn {
+      position: absolute;
+      top: 105%;
+      width: 100%;
+      padding: 20px;
+      font-size: 38px;
+      text-align: center;
+    }
+  }
+}

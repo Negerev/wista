@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+@include('./components/head/_head.html', {
+  "title": "WISTAVERSE"
+})
+
+  <body>
+    <div class="preloader"></div>
+    <div class="noise"></div>
+    <canvas id="canvas-promo"></canvas>
+
+    @include('./components/header/_header.html')
+
+    <main class="main">
+
+      @include('./components/promo/_promo.html')
+      <div class="hidden-mobile">
+        @include('./components/how/_how.html')
+      </div>
+      <div class="visible-mobile">
+        @include('./components/together/_together.html')
+
+        <button type="button" class="change">
+          How does it work
+        </button>
+
+          @include('./components/how/_how.html')
+       
+      </div>
+      @include('./components/partners/_partners.html')
+
+      @include('./components/arena/_arena.html')
+      
+      @include('./components/upcoming/_upcoming.html')
+      
+      @include('./components/slider/_slider.html')
+
+      @include('./components/decentr/_decentr.html')
+      
+      @include('./components/distribute/_distribute.html')
+
+      @include('./components/token/_token.html')
+
+      @include('./components/wista/_wista.html')
+
+      @include('./components/community/_community.html')
+
+      <div class="hidden-mobile">
+        <canvas id="canvas-together"></canvas>
+        @include('./components/together/_together.html')
+      </div>
+      
+      @include('./components/roadmap/_roadmap.html')
+
+      @include('./components/team/_team.html')
+
+      @include('./components/feedback/_feedback.html')
+
+    </main>
+
+  @include('./components/footer/_footer.html')
+
+  <script src="/js/libs/swiper-bundle.min.js"></script>
+  <script src="/js/libs/gsap.min.js"></script>
+  <script src="/js/libs/ScrollTrigger.min.js"></script>
+  <script src="/js/libs/SmoothScroll.min.js"></script>
+  <script src="/js/main.bundle.js"></script>
+  <script src="/js/index.bundle.js"></script>
+  
+  </body>
+</html>

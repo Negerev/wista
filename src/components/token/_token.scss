@@ -1,0 +1,267 @@
+.token {
+    padding: 0 0 100px;
+    overflow: hidden;
+    &__title {
+        display: flex;
+        align-items: center;
+        position: relative;
+        span {
+            display: block;
+            img {
+                display: block;
+                margin-top: -25px;
+            }
+        }
+    }
+    &__img {
+        width: 100%;
+        img {
+            width: 100%;
+            margin-bottom: 50px;
+        }
+    }
+    &__ring-container {
+        position: relative;
+    }
+    &__coin {
+        position: absolute;
+        top: 2%;
+        left: 2%;
+        width: 220px;
+    }
+    &__ring {
+        position: absolute;
+        left: -42%;
+        bottom: -24%;
+    }
+    &__button {
+        display: none;
+    }
+    &__descr {
+        color: rgba(255, 63, 18, 1);
+        margin-bottom: 70px;
+        font-size: 48px;
+        max-width: 70%;
+        margin-top: -30px;
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        row-gap: 70px;
+        margin-top: 70px;
+    }
+    &__item {
+        width: 22%;
+        &:first-child {
+            position: relative;
+            &::before {
+                content: '';
+                position: absolute;
+                z-index: -1;
+                top: -50px;
+                left: -32px;
+                width: 218px;
+                height: 118px;
+                background-image: url(../img/index/token/1.png);
+            }
+        }
+        &:nth-child(3) {
+            position: relative;
+            &::before {
+                content: '';
+                position: absolute;
+                z-index: -1;
+                top: -59px;
+                left: -46px;
+                width: 218px;
+                height: 118px;
+                background-image: url(../img/index/token/3.png);
+            }
+        }
+        &:nth-child(6) {
+            position: relative;
+            &::before {
+                content: '';
+                position: absolute;
+                z-index: -1;
+                top: -59px;
+                left: -38px;
+                width: 218px;
+                height: 118px;
+                background-image: url(../img/index/token/6.png);
+            }
+        }
+        &:last-child {
+            position: relative;
+            width: 48%;
+            &::before {
+                content: '';
+                position: absolute;
+                top: -28px;
+                left: -30px;
+                width: 142px;
+                height: 77px;
+                background-image: url(../img/index/token/7.png);
+            }
+        }
+    }
+    &__num {
+        margin-bottom: 36px;
+    }
+    &__image {
+        display: none;
+    }
+}
+@media (max-width: 1920px) {
+    .token {
+        &__coin {
+            width: 140px;
+        }
+    }
+}
+@media(max-width: 1440px) {
+    .token {
+        &__coin {
+            width: 10vw;
+        }
+    }
+}
+@media(max-width: 1280px) {
+    .token {
+        &__ring {
+            width: 43%;
+            left: -23%;
+            bottom: 0;
+        }
+    }
+}
+@media(max-width: 991px) {
+    .token {
+        padding: 0 0 30px;
+        &__descr {
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+        &__wrapper {
+            row-gap: 40px;
+        }
+        &__item {
+            width: 48%;
+            &:last-child {
+                width: 100%;
+                margin-top: -20px;
+            }
+        }
+        &__num {
+            margin-bottom: 18px;
+        }
+    }
+}
+@media(max-width: 768px) {
+    .token {
+        padding: 0 0 30px;
+        &__title {
+            span {
+                img {
+                    width: 66px;
+                    height: 66px;
+                    margin-bottom: 0;
+                }
+            }
+        }
+        &__wrapper {
+            margin-bottom: 40px;
+            margin-top: -10px;
+            padding-top: 10px;
+            height: 0;
+            opacity: 0;
+            visibility: hidden;
+        }
+        &__coin {
+            top: 1%;
+            width: 9vw;
+        }
+        &__descr {
+            color: rgba(255, 63, 18, 1);
+            margin-bottom: 40px;
+            margin-top: 30px;
+            max-width: 100%;
+        }
+        &__ring {
+            display: none;
+        }
+        &__button {
+            display: block;
+            max-width: 450px;
+            width: 90%;
+            height: 78px;
+            color: #fff;
+            background-color: rgba(255, 63, 18, 1);
+            border: none;
+            border-radius: 57px;
+            margin: 40px auto;
+            font-size: 38px;
+            // margin-bottom: 40px;
+        }
+        &__image {
+            position: relative;
+            display: flex;
+            justify-content: end;
+            gap: 10px;
+            margin-top: 17px;
+            margin-bottom: 20px;
+            img {
+                display: block;
+                width: 18px;
+                margin: 0;
+                margin-bottom: 40px;
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                width: 200px;
+                height: 200px;
+                background-image: url('/img/index/token/ring.png');
+                background-size: contain;
+                right: -9vw;
+                bottom: -93px;
+                transform: rotate(90deg);
+                z-index: 1;
+            }
+        }
+    }
+}
+@media(max-width: 500px) {
+    .token {
+        &__image {
+            &::before {
+                right: -13vw;
+            }
+        }
+        &__coin {
+            width: 43px;
+            left: 3%;
+        }
+        &__title {
+            font-size: 66px;
+            span {
+                img {
+                    width: 52px;
+                    height: 52px;
+                    margin-top: -10px;
+                }
+            }
+        }
+        &__descr {
+            font-size: 24px;
+        }
+    }
+}
+// @media(max-width: 389px) {
+//     .token {
+//         &__coin {
+//             width: 14vw;
+//         }
+//     }
+// }
